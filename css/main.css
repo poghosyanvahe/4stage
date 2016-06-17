@@ -66,3 +66,94 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+@font-face {
+  font-family: 'DejaVuSans';
+  src: url("../lib/fonts/DejaVuSans/DejaVuSans.ttf") format("truetype");
+  src: url("../lib/fonts/DejaVuSans/DejaVuSans.woff") format("woff");
+  src: url("../lib/fonts/DejaVuSans/DejaVuSans.svg") format("svg");
+  src: url("../lib/fonts/DejaVuSans/DejaVuSans.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DejaVuBold';
+  src: url("../lib/fonts/DejaVuBold/DejaVuSansBold.ttf") format("truetype");
+  src: url("../lib/fonts/DejaVuBold/DejaVuSansBold.woff") format("woff");
+  src: url("../lib/fonts/DejaVuBold/DejaVuSansBold.svg") format("svg");
+  src: url("../lib/fonts/DejaVuBold/DejaVuSansBold.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Condensed';
+  src: url("../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.ttf") format("truetype");
+  src: url("../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.woff") format("woff");
+  src: url("../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.svg") format("svg");
+  src: url("../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CondensedBold';
+  src: url("../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.ttf") format("truetype");
+  src: url("../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 90, ../lib/sass/main.scss */
+body, a, a:hover {
+  font-weight: 300;
+  color: #333;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 96, ../lib/sass/main.scss */
+body {
+  font-family: 'DejaVuSans', sans-serif;
+}
+
+/* line 102, ../lib/sass/main.scss */
+header .navbar.navbar-default {
+  background-color: #fff;
+  border: none;
+}
+/* line 106, ../lib/sass/main.scss */
+header .navbar .container-fluid {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 112, ../lib/sass/main.scss */
+header .navbar .container-fluid .navbar-header .navbar-brand > img {
+  width: 150px;
+}
+/* line 117, ../lib/sass/main.scss */
+header .navbar .container-fluid .navbar-header .nav li {
+  text-transform: uppercase;
+  font-family: 'CondensedBold', sans-serif;
+}
+/* line 120, ../lib/sass/main.scss */
+header .navbar .container-fluid .navbar-header .nav li a {
+  color: #333;
+  font-weight: 900;
+}
+/* line 123, ../lib/sass/main.scss */
+header .navbar .container-fluid .navbar-header .nav li a:hover {
+  color: #999;
+}
+/* line 130, ../lib/sass/main.scss */
+header .navbar .container-fluid .navbar-header .nav-menu, header .navbar .container-fluid .navbar-header .nav-menu li {
+  float: left;
+}
+/* line 132, ../lib/sass/main.scss */
+header .navbar .container-fluid .navbar-header .nav-menu a, header .navbar .container-fluid .navbar-header .nav-menu li a {
+  padding: 10px 15px;
+}
+/* line 136, ../lib/sass/main.scss */
+header .navbar .container-fluid .navbar-header .nav-menu img {
+  width: 35px;
+}

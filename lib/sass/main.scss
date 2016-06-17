@@ -2,5 +2,206 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
+
+@font-face {
+    font-family: 'DejaVuSans';
+    src: url('../lib/fonts/DejaVuSans/DejaVuSans.ttf') format('truetype'),;
+    src: url('../lib/fonts/DejaVuSans/DejaVuSans.woff') format('woff');
+    src: url('../lib/fonts/DejaVuSans/DejaVuSans.svg') format('svg');
+    src: url('../lib/fonts/DejaVuSans/DejaVuSans.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DejaVuBold';
+    src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.ttf') format('truetype'),;
+    src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.woff') format('woff');
+    src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.svg') format('svg');
+    src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Condensed';
+    src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.ttf') format('truetype'),;
+    src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.woff') format('woff');
+    src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.svg') format('svg');
+    src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CondensedBold';
+    src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.ttf') format('truetype'),;
+    src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.woff') format('woff');
+    //src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.svg') format('svg');
+    //src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$black: #333;
+$darkGrey: #666;
+$grey: #999;
+$lightGrey: #eee;
+
+@mixin transition($second) {
+    -webkit-transition: all $second+s ease-in-out;
+    -moz-transition: all $second+s ease-in-out;
+    -o-transition: all $second+s ease-in-out;
+    transition: all $second+s ease-in-out;
+}
+
+@mixin blur($px) {
+    -webkit-filter: blur($px+px);
+    filter: blur($px+px);
+}
+
+@mixin brightness($pr) {
+    -webkit-filter: brightness($pr);
+    filter: brightness($pr);
+}
+
+@mixin transform-rotate($deg) {
+    -webkit-transform: rotate($deg+deg);
+    -moz-transform: rotate($deg+deg);
+    -o-transform: rotate($deg+deg);
+    transform: rotate($deg+deg);
+}
+
+@mixin transform-origin($pos1,$pos2) {
+    -webkit-transform-origin: $pos1 $pos2;
+    -moz-transform-origin: $pos1 $pos2;
+    -o-transform-origin: $pos1 $pos2;
+    transform-origin: $pos1 $pos2;
+}
+
+@mixin background-size($size) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+body, a, a:hover {
+    font-weight: 300;
+    color: $black;
+    @include transition(0.3);
+}
+
+body {
+    font-family: 'DejaVuSans', sans-serif;
+}
+
+header {
+    .navbar {
+        &.navbar-default {
+            background-color: #fff;
+            border: none;
+        }
+        .container-fluid {
+            max-width: 1160px;
+            width: 100%;
+            margin: 0 auto;
+            .navbar-header {
+                .navbar-brand {
+                    > img {
+                        width: 150px;
+                    }
+                }
+                .nav {
+                    li {
+                        text-transform: uppercase;
+                        font-family: 'CondensedBold', sans-serif;
+                        a {
+                            color: $black;
+                            font-weight: 900;
+                            &:hover {
+                                color: $grey;
+                            }
+                        }
+                    }
+                }
+                .nav-menu {
+                    &, li {
+                        float: left;
+                        a {
+                            padding: 10px 15px;
+                        }
+                    }
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+
+}
+
+footer {
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1366px) {
+    header {
+
+    }
+
+    main {
+
+    }
+
+    footer {
+
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    header {
+
+    }
+
+    main {
+
+    }
+
+    footer {
+
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+    header {
+
+    }
+
+    main {
+
+    }
+
+    footer {
+
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header {
+
+    }
+
+    main {
+
+    }
+
+    footer {
+
+    }
+}
