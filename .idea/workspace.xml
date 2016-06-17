@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1b0bc27-1c50-4116-81ed-6b4787d530c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/fonts/DejaVuBold/DejaVuSans-Bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/fonts/DejaVuBold/DejaVuSans-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/fonts/DejaVuBold/DejaVuSans-Bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/fonts/DejaVuBold/DejaVuSans-Bold.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/fonts/DejaVuSansCondensed.eot" afterPath="$PROJECT_DIR$/lib/fonts/DejaVuCondencsed/DejaVuSansCondensed.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/fonts/DejaVuSansCondensed.svg" afterPath="$PROJECT_DIR$/lib/fonts/DejaVuCondencsed/DejaVuSansCondensed.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/fonts/DejaVuSansCondensed.ttf" afterPath="$PROJECT_DIR$/lib/fonts/DejaVuCondencsed/DejaVuSansCondensed.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/fonts/DejaVuSansCondensed.woff" afterPath="$PROJECT_DIR$/lib/fonts/DejaVuCondencsed/DejaVuSansCondensed.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/8c04d2ab723632a3a0147ba525b9b3fcf7cbe894/main.scssc" afterPath="$PROJECT_DIR$/.sass-cache/8c04d2ab723632a3a0147ba525b9b3fcf7cbe894/main.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/sass/main.scss" afterPath="$PROJECT_DIR$/lib/sass/main.scss" />
-    </list>
+    <list default="true" id="f1b0bc27-1c50-4116-81ed-6b4787d530c9" name="Default" comment="" />
     <ignored path="4stage.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -194,18 +180,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466151481133</updated>
-      <workItem from="1466151483319" duration="4994000" />
+      <workItem from="1466151483319" duration="5561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4994000" />
+    <option name="totallyTimeSpent" value="5561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="990" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16506922" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16506922" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
