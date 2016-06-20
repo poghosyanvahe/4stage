@@ -5,40 +5,38 @@
     <title>4stage</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:300,700' rel='stylesheet'
-          type='text/css'>
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:300,700' rel='stylesheet'-->
+    <!--type='text/css'>-->
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
 
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-default navbar-fixed-top">
+<header class="navbar-fixed-top">
+    <nav class="navbar navbar-default ">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><img src="img/ico/logo-min.svg" alt=""></a>
 
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Музыкальные инструменты</a>
-                    </li>
-                    <li>
-                        <a class="publiq" href="#">Аудиотехника</a>
-                    </li>
-                    <li>
-                        <a class="publiq" href="#">освещение</a>
-                    </li>
-                    <li>
-                        <a class="publiq" href="#">Подставки</a>
-                    </li>
-                </ul>
                 <ul class="nav-menu">
                     <li><a href="#"><img src="img/ico/search.svg" alt=""></a></li>
                     <li><a href="#"><img src="img/ico/user.svg" alt=""></a></li>
                     <li><a href="#"><img src="img/ico/bucket.svg" alt=""></a></li>
                     <li><a href="#">0</a></li>
                 </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#menu1" data-toggle="tab">Музыкальные инструменты</a>
+                    </li>
+                    <li>
+                        <a href="#menu2" data-toggle="tab">Аудиотехника</a>
+                    </li>
+                    <li>
+                        <a href="#menu3" data-toggle="tab">Подставки</a>
+                    </li>
+                </ul>
+
                 <!--<div class="nav-menu active-nav-menu">-->
                 <!--<div class="triangle"></div>-->
                 <!--<ul>-->
@@ -49,19 +47,79 @@
                 <!--</ul>-->
                 <!--</div>-->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <img src="img/user.PNG" class="img-circle" alt="">
+                    <!--<img src="img/user.PNG" class="img-circle" alt="">-->
                 </button>
             </div>
+
         </div>
     </nav>
+
+    <div class="tab-content">
+        <!--<div class="triangle"></div>-->
+        <ul class="drop-menu tab-pane fade" id="menu1">
+            <li><a href=""><img src="img/ico/MuzikalnieInstrumenti/1.svg" alt=""><span>Фортепиано</span></a></li>
+            <li><a href=""><img src="img/ico/MuzikalnieInstrumenti/2.svg" alt=""><span>Клавишные инструменты</span></a>
+            </li>
+            <li><a href=""><img src="img/ico/MuzikalnieInstrumenti/3.svg" alt=""><span>Духовые инструменты</span></a>
+            </li>
+            <li><a href=""><img src="img/ico/MuzikalnieInstrumenti/4.svg" alt=""><span>Гитары</span></a></li>
+            <li><a href=""><img src="img/ico/MuzikalnieInstrumenti/5.svg" alt=""><span>Смычковые инструменты</span></a>
+            </li>
+            <li><a href=""><img src="img/ico/MuzikalnieInstrumenti/6.svg" alt=""><span>Ударные инструменты</span></a>
+            </li>
+            <li><a href=""><img src="img/ico/MuzikalnieInstrumenti/7.svg" alt=""><span>Губные гармошки</span></a></li>
+            <li><a href=""><img src="img/ico/MuzikalnieInstrumenti/8.svg" alt=""><span>Струны</span></a></li>
+        </ul>
+
+        <ul class="drop-menu tab-pane fade" id="menu2">
+            <li><a href=""><img src="img/ico/AudioTexnika/1.svg" alt=""><span>Фортепиано</span></a></li>
+            <li><a href=""><img src="img/ico/AudioTexnika/2.svg" alt=""><span>Клавишные инструменты</span></a></li>
+            <li><a href=""><img src="img/ico/AudioTexnika/3.svg" alt=""><span>Духовые инструменты</span></a></li>
+            <li><a href=""><img src="img/ico/AudioTexnika/4.svg" alt=""><span>Гитары</span></a></li>
+            <li><a href=""><img src="img/ico/AudioTexnika/5.svg" alt=""><span>Смычковые инструменты</span></a></li>
+            <li><a href=""><img src="img/ico/AudioTexnika/6.svg" alt=""><span>Ударные инструменты</span></a></li>
+            <li><a href=""><img src="img/ico/AudioTexnika/7.svg" alt=""><span>Губные гармошки</span></a></li>
+            <li><a href=""><img src="img/ico/AudioTexnika/8.svg" alt=""><span>Струны</span></a></li>
+        </ul>
+        <ul class="drop-menu tab-pane fade" id="menu3">
+            <li><a href=""><img src="img/ico/Podstavki/1.svg" alt=""><span>Фортепиано</span></a></li>
+            <li><a href=""><img src="img/ico/Podstavki/2.svg" alt=""><span>Клавишные инструменты</span></a></li>
+            <li><a href=""><img src="img/ico/Podstavki/3.svg" alt=""><span>Духовые инструменты</span></a></li>
+            <li><a href=""><img src="img/ico/Podstavki/4.svg" alt=""><span>Гитары</span></a></li>
+            <li><a href=""><img src="img/ico/Podstavki/5.svg" alt=""><span>Смычковые инструменты</span></a></li>
+        </ul>
+    </div>
+    <div class="log-sub">
+        <div class="login">
+            <h1>Вход</h1>
+            <form>
+                <input type="email" name="mail" placeholder="E-mail">
+                <input type="password" name="pass" placeholder="Пароль">
+                <a href="#">Забыли пароль?</a>
+                <input type="submit" name="enter" value="ВОЙТИ">
+                <a href="#">Зарегистрироваться</a>
+            </form>
+        </div>
+        <div class="subtotal">
+
+        </div>
+    </div>
+
+
 </header>
 <main>
+    <div class="black-overlay">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
 
 </main>
 <footer>
 
 </footer>
 <script type="text/javascript" src="lib/jQuery/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
