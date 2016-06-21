@@ -8,8 +8,6 @@
     font-family: 'DejaVuSans';
     src: url('../lib/fonts/DejaVuSans/DejaVuSans.ttf') format('truetype'),;
     src: url('../lib/fonts/DejaVuSans/DejaVuSans.woff') format('woff');
-    src: url('../lib/fonts/DejaVuSans/DejaVuSans.svg') format('svg');
-    src: url('../lib/fonts/DejaVuSans/DejaVuSans.eot') format('eot');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,8 +16,6 @@
     font-family: 'DejaVuBold';
     src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.ttf') format('truetype'),;
     src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.woff') format('woff');
-    src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.svg') format('svg');
-    src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.eot') format('eot');
     font-weight: normal;
     font-style: normal;
 }
@@ -28,8 +24,6 @@
     font-family: 'Condensed';
     src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.ttf') format('truetype'),;
     src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.woff') format('woff');
-    src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.svg') format('svg');
-    src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.eot') format('eot');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,8 +32,6 @@
     font-family: 'CondensedBold';
     src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.ttf') format('truetype'),;
     src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.woff') format('woff');
-    //src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.svg') format('svg');
-    //src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.eot') format('eot');
     font-weight: normal;
     font-style: normal;
 }
@@ -88,9 +80,9 @@ $lightGrey: #eee;
 }
 
 body, a, a:hover {
-    font-weight: 300;
     color: $black;
     @include transition(0.3);
+    text-decoration: none;
 }
 
 body {
@@ -110,6 +102,7 @@ header {
         &.navbar-default {
             background-color: #fff;
             border: none;
+            border-radius: 0;
         }
         .container-fluid {
             max-width: 1280px;
@@ -137,6 +130,12 @@ header {
                             &:hover {
                                 color: $grey;
                             }
+
+                        }
+                        &.active {
+                            a {
+                                color: $grey
+                            }
                         }
                     }
                     .active > a {
@@ -163,18 +162,13 @@ header {
                         &:last-child {
                             background: $black;
                             border: none;
-                            a {
-                                color: #fff;
-                                text-align: center;
-                                width: 66px;
-                                height: 50px;
-                                font-weight: 700;
-                                font-size: 16px;
-                                line-height: 26px;
-                                &:hover {
-                                    text-decoration: none;
-                                }
-                            }
+                            color: #fff;
+                            text-align: center;
+                            width: 66px;
+                            height: 50px;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 50px;
                         }
                     }
                 }
@@ -211,7 +205,6 @@ header {
                     display: inline-block;
                     height: 100%;
                     vertical-align: middle;
-                    text-decoration: none;
                     img {
                         width: 50px;
                         display: inline-block;
@@ -256,29 +249,13 @@ header {
             right: 15px;
             text-align: center;
             width: 300px;
-            background: #fff;
             padding: 30px 0;
             position: absolute;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
-            border: 1px solid $lightGrey;
+
             &:before, &:after {
-                content: '';
-                position: absolute;
-                z-index: 51;
                 right: 140px;
-                width: 0;
-                height: 0;
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-            }
-            &:before {
-                top: -13px;
-                border-bottom: 12px solid $lightGrey;
-            }
-            &:after {
-                top: -12px;
-                border-bottom: 12px solid #fff;
             }
 
             h1 {
@@ -314,8 +291,154 @@ header {
                 font-weight: 700;
             }
         }
-    }
 
+        .login,
+        .subtotal {
+            border: 1px solid $lightGrey;
+            display: none;
+            background: #fff;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                z-index: 51;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+            &:before {
+                top: -13px;
+                border-bottom: 12px solid $lightGrey;
+            }
+            &:after {
+                top: -12px;
+                border-bottom: 12px solid #fff;
+            }
+        }
+        .subtotal {
+            position: absolute;
+            right: 0;
+            &:before, &:after {
+                right: 90px;
+            }
+            ul {
+                width: 300px;
+                li {
+                    position: relative;
+                    padding: 20px 20px 0 20px;
+                    &:after {
+                        border-bottom: 1px solid $lightGrey;
+                        width: 260px;
+                        padding: 10px 0;
+                    }
+
+                    div {
+                        float: left;
+                        p {
+                            font-size: 13px;
+                            color: $darkGrey;
+                            //font-family: ;
+
+                        }
+                        &:last-child {
+                            float: right;
+                            p {
+                                position: absolute;
+                                bottom: 22px;
+                                right: 22px;
+                                font-family: 'DejaVuBold', sans-serif;
+                                font-weight: 600;
+                            }
+                            .close {
+                                position: absolute;
+                                right: 20px;
+                                top: 20px;
+                                width: 14px;
+                                height: 14px;
+                                opacity: 0;
+                                transition: 0s;
+                            }
+                            .close:before, .close:after {
+                                position: absolute;
+                                right: 10px;
+                                content: ' ';
+                                height: 14px;
+                                width: 2px;
+                                background-color: $grey;
+                            }
+                            .close:before {
+                                transform: rotate(45deg);
+                            }
+                            .close:after {
+                                transform: rotate(-45deg);
+                            }
+                        }
+                        h4 {
+                            font-family: 'CondensedBold', sans-serif;
+                            font-size: 16px;
+                            margin-bottom: 5px;
+                            & + p {
+                                margin-bottom: 13px;
+                                & + p {
+                                    span {
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .pic {
+                        margin-right: 10px;
+                        img {
+                            width: 62px;
+                            height: 62px;
+                        }
+                    }
+                    &:hover {
+                        background: $lightGrey;
+                        div {
+                            &:last-child {
+                                .close {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .checkout {
+                width: 300px;
+                padding: 20px;
+                background: $lightGrey;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                span {
+                    margin-bottom: 20px;
+                    &:first-child {
+                        float: left;
+                        font-family: 'Condensed', sans-serif;
+                    }
+                    &:last-of-type {
+                        float: right;
+                        font-family: 'CondensedBold', sans-serif;
+                    }
+                }
+                a {
+                    font-family: 'Condensed', sans-serif;
+                    display: block;
+                    color: $lightGrey;
+                    background: $black;
+                    width: 100%;
+                    border-radius: 50px;
+                    text-align: center;
+                    font-size: 14px;
+                    padding: 10px;
+                    float: left;
+                }
+            }
+        }
+    }
 }
 
 main {
