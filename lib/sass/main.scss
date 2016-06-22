@@ -8,30 +8,38 @@
     font-family: 'DejaVuSans';
     src: url('../lib/fonts/DejaVuSans/DejaVuSans.ttf') format('truetype'),;
     src: url('../lib/fonts/DejaVuSans/DejaVuSans.woff') format('woff');
+    src: url('../lib/fonts/DejaVuSans/DejaVuSans.eot?#iefix') format('embedded-opentype');
+    src: url('../lib/fonts/DejaVuSans/DejaVuSans.svg#DejaVuSans') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'DejaVuBold';
-    src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.ttf') format('truetype'),;
-    src: url('../lib/fonts/DejaVuBold/DejaVuSansBold.woff') format('woff');
+    font-family: 'DejaVuSans-Bold';
+    src: url('../lib/fonts/DejaVuSans-Bold/DejaVuSans-Bold.ttf') format('truetype'),;
+    src: url('../lib/fonts/DejaVuSans-Bold/DejaVuSans-Bold.woff') format('woff');
+    src: url('../lib/fonts/DejaVuSans-Bold/DejaVuSans-Bold.eot?#iefix') format('embedded-opentype');
+    src: url('../lib/fonts/DejaVuSans-Bold/DejaVuSans-Bold.svg#DejaVuSans-Bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Condensed';
-    src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.ttf') format('truetype'),;
-    src: url('../lib/fonts/DejaVuSansCondencsed/DejaVuSansCondensed.woff') format('woff');
+    font-family: 'DejaVuSansCondensed';
+    src: url('../lib/fonts/DejaVuSansCondensed/DejaVuSansCondensed.ttf') format('truetype'),;
+    src: url('../lib/fonts/DejaVuSansCondensed/DejaVuSansCondensed.woff') format('woff');
+    src: url('../lib/fonts/DejaVuSansCondensed/DejaVuSansCondensed.eot?#iefix') format('embedded-opentype');
+    src: url('../lib/fonts/DejaVuSansCondensed/DejaVuSansCondensed.svg#DejaVuSansCondensed') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'CondensedBold';
-    src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.ttf') format('truetype'),;
-    src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensedBold.woff') format('woff');
+    font-family: 'DejaVuSansCondensed-Bold';
+    src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensed-Bold.ttf') format('truetype'),;
+    src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensed-Bold.woff') format('woff');
+    src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensed-Bold.eot?#iefix') format('embedded-opentype');
+    src: url('../lib/fonts/DejaVuSansCondensedBold/DejaVuSansCondensed-Bold.svg#DejaVuSansCondensed-Bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -40,6 +48,10 @@ $black: #333;
 $darkGrey: #666;
 $grey: #999;
 $lightGrey: #eee;
+$dejavu: 'DejaVuSans';
+$bold: 'DejaVuSans-Bold';
+$condensed: 'DejaVuSansCondensed';
+$condensedBold: 'DejaVuSansCondensed-Bold';
 
 @mixin transition($second) {
     -webkit-transition: all $second+s ease-in-out;
@@ -79,18 +91,33 @@ $lightGrey: #eee;
     background-size: $size;
 }
 
-body, a, a:hover {
+body, a, a:hover, a:focus {
     color: $black;
     @include transition(0.3);
     text-decoration: none;
+    outline: none;
 }
 
 body {
-    font-family: 'DejaVuSans', sans-serif;
+    font-family: $dejavu, sans-serif;
 }
 
 h1 {
     text-transform: uppercase;
+    font-family: $bold, sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+p {
+    color: $darkGrey;
+    font-size: 14px;
+    font-family: $dejavu;
+    line-height: 20px;
+}
+
+a {
+    font-size: 14px;
 }
 
 header {
@@ -121,7 +148,7 @@ header {
                     float: right;
                     li {
                         text-transform: uppercase;
-                        font-family: 'CondensedBold', sans-serif;
+                        font-family: $condensedBold, sans-serif;
                         cursor: pointer;
                         a {
                             color: $black;
@@ -146,7 +173,6 @@ header {
                     float: right;
                     li {
                         float: left;
-
                     }
                     li {
                         border-right: 1px solid $lightGrey;
@@ -157,6 +183,13 @@ header {
                             padding: 13px 20px;
                             img {
                                 width: 25px;
+                            }
+                        }
+                        &.search {
+                            a {
+                                img:last-child {
+                                    display: none;
+                                }
                             }
                         }
                         &:last-child {
@@ -173,7 +206,6 @@ header {
                     }
                 }
             }
-
         }
     }
     .tab-content {
@@ -260,7 +292,7 @@ header {
 
             h1 {
                 font-size: 36px;
-                font-family: 'Condensed', sans-serif;
+                font-family: $condensed, sans-serif;
 
             }
             input {
@@ -281,11 +313,11 @@ header {
                 background: $black;
                 color: #fff;
                 border-radius: 50px;
-                font-family: 'Condensed', sans-serif;
+                font-family: $condensed, sans-serif;
 
             }
             a {
-                font-family: 'DejaVuBold', sans-serif;
+                font-family: $bold, sans-serif;
                 font-size: 14px;
                 margin: 10px 0;
                 font-weight: 700;
@@ -346,7 +378,7 @@ header {
                                 position: absolute;
                                 bottom: 22px;
                                 right: 22px;
-                                font-family: 'DejaVuBold', sans-serif;
+                                font-family: $bold, sans-serif;
                                 font-weight: 600;
                             }
                             .close {
@@ -374,7 +406,7 @@ header {
                             }
                         }
                         h4 {
-                            font-family: 'CondensedBold', sans-serif;
+                            font-family: $condensedBold, sans-serif;
                             font-size: 16px;
                             margin-bottom: 5px;
                             & + p {
@@ -417,15 +449,15 @@ header {
                     margin-bottom: 20px;
                     &:first-child {
                         float: left;
-                        font-family: 'Condensed', sans-serif;
+                        font-family: $condensed, sans-serif;
                     }
                     &:last-of-type {
                         float: right;
-                        font-family: 'CondensedBold', sans-serif;
+                        font-family: CondensedBold, sans-serif;
                     }
                 }
                 a {
-                    font-family: 'Condensed', sans-serif;
+                    font-family: $condensed, sans-serif;
                     display: block;
                     color: $lightGrey;
                     background: $black;
@@ -442,10 +474,141 @@ header {
 }
 
 main {
+    margin-top: 50px;
     .black-overlay {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.81);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        overflow-y: hidden;
+    }
+    #owl-demo .item {
+        margin: 0 auto;
+        height: 70vh;
+
+        .clearfix {
+            position: relative;
+            max-width: 1280px;
+            margin: 0 auto;
+            height: 100%;
+            .shop-now {
+                position: absolute;
+                padding: 0 0 0 60px;
+                top: 40%;
+                h1, p {
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+                h1 {
+                    font-family: $condensedBold;
+                }
+                a {
+                    display: inline-block;
+                    background: #fff;
+                    color: $black;
+                    padding: 10px 25px;
+                    border-radius: 50px;
+                }
+            }
+        }
+        //img {
+        //    width: 100%;
+        //    display: block;
+        //    height: auto;
+        //}
+    }
+
+    .equipment {
+        max-width: 1280px;
+        margin: 60px auto;
+        padding: 0 60px 0 60px;
+        div {
+            position: relative;
+            display: inline-block;
+            span {
+                text-transform: uppercase;
+                position: absolute;
+                font-family: $condensedBold;
+                font-size: 24px;
+            }
+        }
+        .amplifiers {
+            margin-right: 13px;
+            span {
+                left: 20px;
+                top: 20px;
+            }
+        }
+        .microphone {
+            margin-right: 13px;
+            span {
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+        .trumpet {
+            div {
+                display: block;
+                &:first-child {
+                    margin-bottom: 12px;
+                    span {
+                        left: 20px;
+                        top: 20px;
+                    }
+                }
+                &:last-child {
+                    span {
+                        left: 20px;
+                        bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .services {
+        position: relative;
+        background: $lightGrey;
+        width: 100%;
+        overflow: hidden;
+        height: 420px;
+        .clearfix {
+            position: relative;
+            width: 1280px;
+            margin: 0 auto;
+            padding: 0 60px 0 60px;
+            height: 100%;
+            .col-lg-6:first-child {
+                height: 100%;
+                div {
+                    width: 90%;
+                    position: absolute;
+                    top: 50%;
+                    padding-left: 0;
+                    transform: translateY(-50%);
+                    h1, p {
+                        margin-bottom: 20px;
+                    }
+                    h1 {
+                        font-family: $condensedBold;
+                    }
+                    a {
+                        padding: 10px 25px;
+                        background: $black;
+                        color: $lightGrey;
+                        border-radius: 50px;
+                        display: inline-block;
+                    }
+                }
+
+            }
+            img {
+                position: absolute;
+                top: -160px;
+            }
+        }
     }
 }
 

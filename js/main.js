@@ -6,7 +6,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
 
     });
-
+    
 
 });
 
@@ -20,14 +20,16 @@ $(document).on('click', function (e) {
 
     if ($('.login').is(':visible') && $(e.target).closest(".login").length == 0) {
         $('.login').fadeOut();
-        if ($('main>div').hasClass('black-overlay')) {
-            $('main>div').removeClass('black-overlay');
+        if ($('.all').hasClass('black-overlay')) {
+            $('.all').removeClass('black-overlay');
+            $('body').css('overflow-y','scroll')
         }
 
     } else if (!$('.login').is(':visible') && $(e.target).closest(".user-login").length != 0) {
         $('.login').fadeIn();
-        if (!$('main>div').hasClass('black-overlay')) {
-            $('main>div').addClass('black-overlay');
+        if (!$('.all').hasClass('black-overlay')) {
+            $('.all').addClass('black-overlay');
+            $('body').css('overflow-y','hidden');
             $('.drop-menu.active').hide();
         }
 
@@ -36,13 +38,15 @@ $(document).on('click', function (e) {
 
     if ($('.subtotal').is(':visible') && $(e.target).closest(".subtotal").length == 0) {
         $('.subtotal').fadeOut();
-        if ($('main>div').hasClass('black-overlay')) {
-            $('main>div').removeClass('black-overlay');
+        if ($('.all').hasClass('black-overlay')) {
+            $('.all').removeClass('black-overlay');
+            $('body').css('overflow-y','scroll')
         }
     } else if (!$('.subtotal').is(':visible') && $(e.target).closest(".bucket").length != 0) {
         $('.subtotal').fadeIn();
-        if (!$('main>div').hasClass('black-overlay')) {
-            $('main>div').addClass('black-overlay');
+        if (!$('.all').hasClass('black-overlay')) {
+            $('.all').addClass('black-overlay');
+            $('body').css('overflow-y','hidden')
         }
     }
 
