@@ -109,6 +109,10 @@ h1 {
     line-height: 40px;
 }
 
+h1, h2, h4, h5, h6 {
+    line-height: normal;
+}
+
 p {
     color: $darkGrey;
     font-size: 14px;
@@ -410,7 +414,6 @@ header {
                             font-size: 16px;
                             margin-bottom: 5px;
                             & + p {
-                                margin-bottom: 13px;
                                 & + p {
                                     span {
                                         font-weight: 600;
@@ -485,7 +488,22 @@ main {
         z-index: 5;
         overflow-y: hidden;
     }
-    #owl-demo .item {
+
+    .part2,
+    .part3 .clearfix,
+    .part4 {
+        max-width: 1280px;
+        padding: 0 60px 0 60px;
+    }
+
+    .part1,
+    .part2,
+    .part3,
+    .part4 {
+        margin: 0 auto 60px;
+    }
+
+    .part1 .item {
         margin: 0 auto;
         height: 70vh;
 
@@ -521,10 +539,7 @@ main {
         //}
     }
 
-    .equipment {
-        max-width: 1280px;
-        margin: 60px auto;
-        padding: 0 60px 0 60px;
+    .part2 {
         div {
             position: relative;
             display: inline-block;
@@ -568,7 +583,7 @@ main {
             }
         }
     }
-    .services {
+    .part3 {
         position: relative;
         background: $lightGrey;
         width: 100%;
@@ -607,6 +622,113 @@ main {
             img {
                 position: absolute;
                 top: -160px;
+            }
+        }
+    }
+    .part4 {
+        h1 {
+            font-family: $condensed;
+            margin-bottom: 40px;
+        }
+        #owl-recom {
+            .owl-item {
+                .item {
+                    margin-right: 10px;
+                    position: relative;
+
+                    a {
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    h4 {
+                        height: 32px;
+                        margin: 10px 0;
+                        a {
+                            text-transform: uppercase;
+                            font-family: $condensedBold;
+
+                            font-size: 16px;
+                        }
+
+                    }
+                    p {
+                        margin-bottom: 10px;
+                    }
+                    div {
+                        span {
+                            float: left;
+                            font-size: 20px;
+                            font-family: $condensed;
+
+                        }
+                        .add {
+                            float: right;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            cursor: pointer;
+                            width: 20px;
+                            height: 20px;
+                            opacity: 0.3;
+                            transition: all 0.3s ease-in-out;
+                            &:hover {
+                                opacity: 1;
+                                transform: rotate(90deg);
+                            }
+                            &:before, &:after {
+                                position: absolute;
+                                left: 9px;
+                                content: ' ';
+                                height: 19px;
+                                width: 4px;
+                                background-color: #333;
+                            }
+                            &:before {
+                                transform: rotate(0deg);
+                            }
+                            &:after {
+                                transform: rotate(90deg);
+                            }
+                        }
+                        .added {
+                            position: absolute;
+                            right: 0;
+                            display: none;
+                            img {
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .owl-controls {
+                position: absolute;
+                top: -70px;
+                right: 5px;
+                margin: 0;
+                .owl-prev {
+                    background: url('../img/ico/arrow-l.svg'), no-repeat;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                .owl-next {
+                    background: url('../img/ico/arrow-r.svg'), no-repeat;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                .owl-next, .owl-prev {
+                    width: 34px;
+                    height: 34px;
+                    opacity: 0.5;
+                    @include transition(0.3);
+
+                }
             }
         }
     }

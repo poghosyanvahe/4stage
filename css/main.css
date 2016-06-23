@@ -128,6 +128,11 @@ h1 {
 }
 
 /* line 112, ../lib/sass/main.scss */
+h1, h2, h4, h5, h6 {
+  line-height: normal;
+}
+
+/* line 116, ../lib/sass/main.scss */
 p {
   color: #666;
   font-size: 14px;
@@ -135,95 +140,95 @@ p {
   line-height: 20px;
 }
 
-/* line 119, ../lib/sass/main.scss */
+/* line 123, ../lib/sass/main.scss */
 a {
   font-size: 14px;
 }
 
-/* line 124, ../lib/sass/main.scss */
+/* line 128, ../lib/sass/main.scss */
 header.navbar-fixed-top {
   z-index: 50;
 }
-/* line 127, ../lib/sass/main.scss */
+/* line 131, ../lib/sass/main.scss */
 header .navbar {
   margin: 0;
 }
-/* line 129, ../lib/sass/main.scss */
+/* line 133, ../lib/sass/main.scss */
 header .navbar.navbar-default {
   background-color: #fff;
   border: none;
   border-radius: 0;
 }
-/* line 134, ../lib/sass/main.scss */
+/* line 138, ../lib/sass/main.scss */
 header .navbar .container-fluid {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
 }
-/* line 139, ../lib/sass/main.scss */
+/* line 143, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header {
   width: 100%;
   padding: 0 60px;
 }
-/* line 143, ../lib/sass/main.scss */
+/* line 147, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .navbar-brand > img {
   width: 105px;
 }
-/* line 147, ../lib/sass/main.scss */
+/* line 151, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav {
   float: right;
 }
-/* line 149, ../lib/sass/main.scss */
+/* line 153, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav li {
   text-transform: uppercase;
   font-family: "DejaVuSansCondensed-Bold", sans-serif;
   cursor: pointer;
 }
-/* line 153, ../lib/sass/main.scss */
+/* line 157, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav li a {
   color: #333;
   font-weight: 900;
   font-size: 13px;
 }
-/* line 157, ../lib/sass/main.scss */
+/* line 161, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav li a:hover {
   color: #999;
 }
-/* line 163, ../lib/sass/main.scss */
+/* line 167, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav li.active a {
   color: #999;
 }
-/* line 168, ../lib/sass/main.scss */
+/* line 172, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav .active > a {
   background: none;
 }
-/* line 172, ../lib/sass/main.scss */
+/* line 176, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav-menu {
   float: right;
 }
-/* line 174, ../lib/sass/main.scss */
+/* line 178, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav-menu li {
   float: left;
 }
-/* line 177, ../lib/sass/main.scss */
+/* line 181, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav-menu li {
   border-right: 1px solid #eee;
 }
-/* line 180, ../lib/sass/main.scss */
+/* line 184, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav-menu li a {
   display: inline-block;
   padding: 13px 20px;
 }
-/* line 184, ../lib/sass/main.scss */
+/* line 188, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav-menu li a img {
   width: 25px;
 }
-/* line 190, ../lib/sass/main.scss */
+/* line 194, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav-menu li.search a img:last-child {
   display: none;
 }
-/* line 195, ../lib/sass/main.scss */
+/* line 199, ../lib/sass/main.scss */
 header .navbar .container-fluid .navbar-header .nav-menu li:last-child {
   background: #333;
   border: none;
@@ -235,11 +240,11 @@ header .navbar .container-fluid .navbar-header .nav-menu li:last-child {
   font-size: 16px;
   line-height: 50px;
 }
-/* line 211, ../lib/sass/main.scss */
+/* line 215, ../lib/sass/main.scss */
 header .tab-content {
   position: relative;
 }
-/* line 213, ../lib/sass/main.scss */
+/* line 217, ../lib/sass/main.scss */
 header .tab-content .drop-menu {
   position: absolute;
   z-index: 53;
@@ -247,7 +252,7 @@ header .tab-content .drop-menu {
   width: 100%;
   background: #eee;
 }
-/* line 219, ../lib/sass/main.scss */
+/* line 223, ../lib/sass/main.scss */
 header .tab-content .drop-menu li {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -258,28 +263,28 @@ header .tab-content .drop-menu li {
   height: 160px;
   padding: 30px;
 }
-/* line 225, ../lib/sass/main.scss */
+/* line 229, ../lib/sass/main.scss */
 header .tab-content .drop-menu li:hover {
   background: #333;
 }
-/* line 227, ../lib/sass/main.scss */
+/* line 231, ../lib/sass/main.scss */
 header .tab-content .drop-menu li:hover a {
   color: #eee;
 }
-/* line 229, ../lib/sass/main.scss */
+/* line 233, ../lib/sass/main.scss */
 header .tab-content .drop-menu li:hover a img {
   -webkit-filter: brightness(465%);
   /* Chrome, Safari, Opera */
   filter: brightness(465%);
 }
-/* line 235, ../lib/sass/main.scss */
+/* line 239, ../lib/sass/main.scss */
 header .tab-content .drop-menu li a {
   width: 100%;
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-/* line 240, ../lib/sass/main.scss */
+/* line 244, ../lib/sass/main.scss */
 header .tab-content .drop-menu li a img {
   width: 50px;
   display: inline-block;
@@ -288,13 +293,13 @@ header .tab-content .drop-menu li a img {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 245, ../lib/sass/main.scss */
+/* line 249, ../lib/sass/main.scss */
 header .tab-content .drop-menu li a span {
   font-size: 12px;
   display: block;
   margin-top: 10px;
 }
-/* line 252, ../lib/sass/main.scss */
+/* line 256, ../lib/sass/main.scss */
 header .tab-content .drop-menu:before {
   content: '';
   position: absolute;
@@ -306,25 +311,25 @@ header .tab-content .drop-menu:before {
   border-right: 10px solid transparent;
   border-bottom: 12px solid #eee;
 }
-/* line 264, ../lib/sass/main.scss */
+/* line 268, ../lib/sass/main.scss */
 header .tab-content #menu1.drop-menu:before {
   left: 885px;
 }
-/* line 267, ../lib/sass/main.scss */
+/* line 271, ../lib/sass/main.scss */
 header .tab-content #menu2.drop-menu:before {
   right: 815px;
 }
-/* line 270, ../lib/sass/main.scss */
+/* line 274, ../lib/sass/main.scss */
 header .tab-content #menu3.drop-menu:before {
   right: 685px;
 }
-/* line 276, ../lib/sass/main.scss */
+/* line 280, ../lib/sass/main.scss */
 header .log-sub {
   width: 1160px;
   margin: 0 auto;
   position: relative;
 }
-/* line 280, ../lib/sass/main.scss */
+/* line 284, ../lib/sass/main.scss */
 header .log-sub .login {
   right: 15px;
   text-align: center;
@@ -334,16 +339,16 @@ header .log-sub .login {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-/* line 289, ../lib/sass/main.scss */
+/* line 293, ../lib/sass/main.scss */
 header .log-sub .login:before, header .log-sub .login:after {
   right: 140px;
 }
-/* line 293, ../lib/sass/main.scss */
+/* line 297, ../lib/sass/main.scss */
 header .log-sub .login h1 {
   font-size: 36px;
   font-family: "DejaVuSansCondensed", sans-serif;
 }
-/* line 298, ../lib/sass/main.scss */
+/* line 302, ../lib/sass/main.scss */
 header .log-sub .login input {
   width: 270px;
   padding: 10px 15px;
@@ -353,11 +358,11 @@ header .log-sub .login input {
   outline: none;
   color: #999;
 }
-/* line 306, ../lib/sass/main.scss */
+/* line 310, ../lib/sass/main.scss */
 header .log-sub .login input:focus {
   border: 1px solid #999;
 }
-/* line 310, ../lib/sass/main.scss */
+/* line 314, ../lib/sass/main.scss */
 header .log-sub .login input[type='submit'] {
   width: 154px;
   margin: 10px auto;
@@ -366,21 +371,21 @@ header .log-sub .login input[type='submit'] {
   border-radius: 50px;
   font-family: "DejaVuSansCondensed", sans-serif;
 }
-/* line 319, ../lib/sass/main.scss */
+/* line 323, ../lib/sass/main.scss */
 header .log-sub .login a {
   font-family: "DejaVuSans-Bold", sans-serif;
   font-size: 14px;
   margin: 10px 0;
   font-weight: 700;
 }
-/* line 327, ../lib/sass/main.scss */
+/* line 331, ../lib/sass/main.scss */
 header .log-sub .login,
 header .log-sub .subtotal {
   border: 1px solid #eee;
   display: none;
   background: #fff;
 }
-/* line 332, ../lib/sass/main.scss */
+/* line 336, ../lib/sass/main.scss */
 header .log-sub .login:before, header .log-sub .login:after,
 header .log-sub .subtotal:before,
 header .log-sub .subtotal:after {
@@ -392,56 +397,56 @@ header .log-sub .subtotal:after {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
-/* line 341, ../lib/sass/main.scss */
+/* line 345, ../lib/sass/main.scss */
 header .log-sub .login:before,
 header .log-sub .subtotal:before {
   top: -13px;
   border-bottom: 12px solid #eee;
 }
-/* line 345, ../lib/sass/main.scss */
+/* line 349, ../lib/sass/main.scss */
 header .log-sub .login:after,
 header .log-sub .subtotal:after {
   top: -12px;
   border-bottom: 12px solid #fff;
 }
-/* line 350, ../lib/sass/main.scss */
+/* line 354, ../lib/sass/main.scss */
 header .log-sub .subtotal {
   position: absolute;
   right: 0;
 }
-/* line 353, ../lib/sass/main.scss */
+/* line 357, ../lib/sass/main.scss */
 header .log-sub .subtotal:before, header .log-sub .subtotal:after {
   right: 90px;
 }
-/* line 356, ../lib/sass/main.scss */
+/* line 360, ../lib/sass/main.scss */
 header .log-sub .subtotal ul {
   width: 300px;
 }
-/* line 358, ../lib/sass/main.scss */
+/* line 362, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li {
   position: relative;
   padding: 20px 20px 0 20px;
 }
-/* line 361, ../lib/sass/main.scss */
+/* line 365, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li:after {
   border-bottom: 1px solid #eee;
   width: 260px;
   padding: 10px 0;
 }
-/* line 367, ../lib/sass/main.scss */
+/* line 371, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div {
   float: left;
 }
-/* line 369, ../lib/sass/main.scss */
+/* line 373, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div p {
   font-size: 13px;
   color: #666;
 }
-/* line 375, ../lib/sass/main.scss */
+/* line 379, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div:last-child {
   float: right;
 }
-/* line 377, ../lib/sass/main.scss */
+/* line 381, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div:last-child p {
   position: absolute;
   bottom: 22px;
@@ -449,7 +454,7 @@ header .log-sub .subtotal ul li div:last-child p {
   font-family: "DejaVuSans-Bold", sans-serif;
   font-weight: 600;
 }
-/* line 384, ../lib/sass/main.scss */
+/* line 388, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div:last-child .close {
   position: absolute;
   right: 20px;
@@ -459,7 +464,7 @@ header .log-sub .subtotal ul li div:last-child .close {
   opacity: 0;
   transition: 0s;
 }
-/* line 393, ../lib/sass/main.scss */
+/* line 397, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div:last-child .close:before, header .log-sub .subtotal ul li div:last-child .close:after {
   position: absolute;
   right: 10px;
@@ -468,46 +473,42 @@ header .log-sub .subtotal ul li div:last-child .close:before, header .log-sub .s
   width: 2px;
   background-color: #999;
 }
-/* line 401, ../lib/sass/main.scss */
+/* line 405, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div:last-child .close:before {
   transform: rotate(45deg);
 }
-/* line 404, ../lib/sass/main.scss */
+/* line 408, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div:last-child .close:after {
   transform: rotate(-45deg);
 }
-/* line 408, ../lib/sass/main.scss */
+/* line 412, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div h4 {
   font-family: "DejaVuSansCondensed-Bold", sans-serif;
   font-size: 16px;
   margin-bottom: 5px;
 }
-/* line 412, ../lib/sass/main.scss */
-header .log-sub .subtotal ul li div h4 + p {
-  margin-bottom: 13px;
-}
-/* line 415, ../lib/sass/main.scss */
+/* line 418, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li div h4 + p + p span {
   font-weight: 600;
 }
-/* line 422, ../lib/sass/main.scss */
+/* line 425, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li .pic {
   margin-right: 10px;
 }
-/* line 424, ../lib/sass/main.scss */
+/* line 427, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li .pic img {
   width: 62px;
   height: 62px;
 }
-/* line 429, ../lib/sass/main.scss */
+/* line 432, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li:hover {
   background: #eee;
 }
-/* line 433, ../lib/sass/main.scss */
+/* line 436, ../lib/sass/main.scss */
 header .log-sub .subtotal ul li:hover div:last-child .close {
   opacity: 1;
 }
-/* line 442, ../lib/sass/main.scss */
+/* line 445, ../lib/sass/main.scss */
 header .log-sub .subtotal .checkout {
   width: 300px;
   padding: 20px;
@@ -515,21 +516,21 @@ header .log-sub .subtotal .checkout {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-/* line 448, ../lib/sass/main.scss */
+/* line 451, ../lib/sass/main.scss */
 header .log-sub .subtotal .checkout span {
   margin-bottom: 20px;
 }
-/* line 450, ../lib/sass/main.scss */
+/* line 453, ../lib/sass/main.scss */
 header .log-sub .subtotal .checkout span:first-child {
   float: left;
   font-family: "DejaVuSansCondensed", sans-serif;
 }
-/* line 454, ../lib/sass/main.scss */
+/* line 457, ../lib/sass/main.scss */
 header .log-sub .subtotal .checkout span:last-of-type {
   float: right;
   font-family: CondensedBold, sans-serif;
 }
-/* line 459, ../lib/sass/main.scss */
+/* line 462, ../lib/sass/main.scss */
 header .log-sub .subtotal .checkout a {
   font-family: "DejaVuSansCondensed", sans-serif;
   display: block;
@@ -543,11 +544,11 @@ header .log-sub .subtotal .checkout a {
   float: left;
 }
 
-/* line 476, ../lib/sass/main.scss */
+/* line 479, ../lib/sass/main.scss */
 main {
   margin-top: 50px;
 }
-/* line 478, ../lib/sass/main.scss */
+/* line 481, ../lib/sass/main.scss */
 main .black-overlay {
   width: 100%;
   height: 100%;
@@ -558,141 +559,263 @@ main .black-overlay {
   z-index: 5;
   overflow-y: hidden;
 }
-/* line 488, ../lib/sass/main.scss */
-main #owl-demo .item {
+/* line 492, ../lib/sass/main.scss */
+main .part2,
+main .part3 .clearfix,
+main .part4 {
+  max-width: 1280px;
+  padding: 0 60px 0 60px;
+}
+/* line 499, ../lib/sass/main.scss */
+main .part1,
+main .part2,
+main .part3,
+main .part4 {
+  margin: 0 auto 60px;
+}
+/* line 506, ../lib/sass/main.scss */
+main .part1 .item {
   margin: 0 auto;
   height: 70vh;
 }
-/* line 492, ../lib/sass/main.scss */
-main #owl-demo .item .clearfix {
+/* line 510, ../lib/sass/main.scss */
+main .part1 .item .clearfix {
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
   height: 100%;
 }
-/* line 497, ../lib/sass/main.scss */
-main #owl-demo .item .clearfix .shop-now {
+/* line 515, ../lib/sass/main.scss */
+main .part1 .item .clearfix .shop-now {
   position: absolute;
   padding: 0 0 0 60px;
   top: 40%;
 }
-/* line 501, ../lib/sass/main.scss */
-main #owl-demo .item .clearfix .shop-now h1, main #owl-demo .item .clearfix .shop-now p {
+/* line 519, ../lib/sass/main.scss */
+main .part1 .item .clearfix .shop-now h1, main .part1 .item .clearfix .shop-now p {
   color: #fff;
   margin-bottom: 20px;
 }
-/* line 505, ../lib/sass/main.scss */
-main #owl-demo .item .clearfix .shop-now h1 {
+/* line 523, ../lib/sass/main.scss */
+main .part1 .item .clearfix .shop-now h1 {
   font-family: "DejaVuSansCondensed-Bold";
 }
-/* line 508, ../lib/sass/main.scss */
-main #owl-demo .item .clearfix .shop-now a {
+/* line 526, ../lib/sass/main.scss */
+main .part1 .item .clearfix .shop-now a {
   display: inline-block;
   background: #fff;
   color: #333;
   padding: 10px 25px;
   border-radius: 50px;
 }
-/* line 524, ../lib/sass/main.scss */
-main .equipment {
-  max-width: 1280px;
-  margin: 60px auto;
-  padding: 0 60px 0 60px;
-}
-/* line 528, ../lib/sass/main.scss */
-main .equipment div {
+/* line 543, ../lib/sass/main.scss */
+main .part2 div {
   position: relative;
   display: inline-block;
 }
-/* line 531, ../lib/sass/main.scss */
-main .equipment div span {
+/* line 546, ../lib/sass/main.scss */
+main .part2 div span {
   text-transform: uppercase;
   position: absolute;
   font-family: "DejaVuSansCondensed-Bold";
   font-size: 24px;
 }
-/* line 538, ../lib/sass/main.scss */
-main .equipment .amplifiers {
-  margin-right: 13px;
-}
-/* line 540, ../lib/sass/main.scss */
-main .equipment .amplifiers span {
-  left: 20px;
-  top: 20px;
-}
-/* line 545, ../lib/sass/main.scss */
-main .equipment .microphone {
-  margin-right: 13px;
-}
-/* line 547, ../lib/sass/main.scss */
-main .equipment .microphone span {
-  left: 20px;
-  bottom: 20px;
-}
 /* line 553, ../lib/sass/main.scss */
-main .equipment .trumpet div {
-  display: block;
+main .part2 .amplifiers {
+  margin-right: 13px;
 }
 /* line 555, ../lib/sass/main.scss */
-main .equipment .trumpet div:first-child {
-  margin-bottom: 12px;
-}
-/* line 557, ../lib/sass/main.scss */
-main .equipment .trumpet div:first-child span {
+main .part2 .amplifiers span {
   left: 20px;
   top: 20px;
 }
-/* line 563, ../lib/sass/main.scss */
-main .equipment .trumpet div:last-child span {
+/* line 560, ../lib/sass/main.scss */
+main .part2 .microphone {
+  margin-right: 13px;
+}
+/* line 562, ../lib/sass/main.scss */
+main .part2 .microphone span {
   left: 20px;
   bottom: 20px;
 }
-/* line 571, ../lib/sass/main.scss */
-main .services {
+/* line 568, ../lib/sass/main.scss */
+main .part2 .trumpet div {
+  display: block;
+}
+/* line 570, ../lib/sass/main.scss */
+main .part2 .trumpet div:first-child {
+  margin-bottom: 12px;
+}
+/* line 572, ../lib/sass/main.scss */
+main .part2 .trumpet div:first-child span {
+  left: 20px;
+  top: 20px;
+}
+/* line 578, ../lib/sass/main.scss */
+main .part2 .trumpet div:last-child span {
+  left: 20px;
+  bottom: 20px;
+}
+/* line 586, ../lib/sass/main.scss */
+main .part3 {
   position: relative;
   background: #eee;
   width: 100%;
   overflow: hidden;
   height: 420px;
 }
-/* line 577, ../lib/sass/main.scss */
-main .services .clearfix {
+/* line 592, ../lib/sass/main.scss */
+main .part3 .clearfix {
   position: relative;
   width: 1280px;
   margin: 0 auto;
   padding: 0 60px 0 60px;
   height: 100%;
 }
-/* line 583, ../lib/sass/main.scss */
-main .services .clearfix .col-lg-6:first-child {
+/* line 598, ../lib/sass/main.scss */
+main .part3 .clearfix .col-lg-6:first-child {
   height: 100%;
 }
-/* line 585, ../lib/sass/main.scss */
-main .services .clearfix .col-lg-6:first-child div {
+/* line 600, ../lib/sass/main.scss */
+main .part3 .clearfix .col-lg-6:first-child div {
   width: 90%;
   position: absolute;
   top: 50%;
   padding-left: 0;
   transform: translateY(-50%);
 }
-/* line 591, ../lib/sass/main.scss */
-main .services .clearfix .col-lg-6:first-child div h1, main .services .clearfix .col-lg-6:first-child div p {
+/* line 606, ../lib/sass/main.scss */
+main .part3 .clearfix .col-lg-6:first-child div h1, main .part3 .clearfix .col-lg-6:first-child div p {
   margin-bottom: 20px;
 }
-/* line 594, ../lib/sass/main.scss */
-main .services .clearfix .col-lg-6:first-child div h1 {
+/* line 609, ../lib/sass/main.scss */
+main .part3 .clearfix .col-lg-6:first-child div h1 {
   font-family: "DejaVuSansCondensed-Bold";
 }
-/* line 597, ../lib/sass/main.scss */
-main .services .clearfix .col-lg-6:first-child div a {
+/* line 612, ../lib/sass/main.scss */
+main .part3 .clearfix .col-lg-6:first-child div a {
   padding: 10px 25px;
   background: #333;
   color: #eee;
   border-radius: 50px;
   display: inline-block;
 }
-/* line 607, ../lib/sass/main.scss */
-main .services .clearfix img {
+/* line 622, ../lib/sass/main.scss */
+main .part3 .clearfix img {
   position: absolute;
   top: -160px;
+}
+/* line 629, ../lib/sass/main.scss */
+main .part4 h1 {
+  font-family: "DejaVuSansCondensed";
+  margin-bottom: 40px;
+}
+/* line 635, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item {
+  margin-right: 10px;
+  position: relative;
+}
+/* line 640, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* line 647, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item h4 {
+  height: 32px;
+  margin: 10px 0;
+}
+/* line 650, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item h4 a {
+  text-transform: uppercase;
+  font-family: "DejaVuSansCondensed-Bold";
+  font-size: 16px;
+}
+/* line 658, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item p {
+  margin-bottom: 10px;
+}
+/* line 662, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item div span {
+  float: left;
+  font-size: 20px;
+  font-family: "DejaVuSansCondensed";
+}
+/* line 668, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item div .add {
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+/* line 678, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item div .add:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+/* line 682, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item div .add:before, main .part4 #owl-recom .owl-item .item div .add:after {
+  position: absolute;
+  left: 9px;
+  content: ' ';
+  height: 19px;
+  width: 4px;
+  background-color: #333;
+}
+/* line 690, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item div .add:before {
+  transform: rotate(0deg);
+}
+/* line 693, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item div .add:after {
+  transform: rotate(90deg);
+}
+/* line 697, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item div .added {
+  position: absolute;
+  right: 0;
+  display: none;
+}
+/* line 701, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-item .item div .added img {
+  width: 20px;
+}
+/* line 708, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-controls {
+  position: absolute;
+  top: -70px;
+  right: 5px;
+  margin: 0;
+}
+/* line 713, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-controls .owl-prev {
+  background: url("../img/ico/arrow-l.svg"), no-repeat;
+}
+/* line 715, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-controls .owl-prev:hover {
+  opacity: 1;
+}
+/* line 719, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-controls .owl-next {
+  background: url("../img/ico/arrow-r.svg"), no-repeat;
+}
+/* line 721, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-controls .owl-next:hover {
+  opacity: 1;
+}
+/* line 725, ../lib/sass/main.scss */
+main .part4 #owl-recom .owl-controls .owl-next, main .part4 #owl-recom .owl-controls .owl-prev {
+  width: 34px;
+  height: 34px;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
