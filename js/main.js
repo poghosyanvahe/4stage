@@ -2,6 +2,25 @@
  * Created by User on 29.03.2016.
  */
 $(document).ready(function () {
+
+    $(window).scroll(function () {
+
+    });
+
+    // part 2 grid
+
+    $('.grid').isotope({
+        itemSelector: '.grid-item',
+        masonry: {
+            columnWidth: 100,
+            gutter: 20
+        }
+    });
+
+    // End
+
+    // Slider caver
+
     $("#owl-demo").owlCarousel({
 
         slideSpeed: 300,
@@ -20,6 +39,10 @@ $(document).ready(function () {
 
     });
 
+    // End
+
+    // Slider recomendation
+
     $("#owl-recom").owlCarousel({
 
         // autoPlay: 3000, //Set AutoPlay to 3 seconds
@@ -30,27 +53,30 @@ $(document).ready(function () {
         pagination: false,
         navigation: true,
         stopOnHover: true,
-        navigationText: ['', ''],
-
-    })
-    ;
-    $(window).scroll(function () {
+        navigationText: ['', '']
 
     });
 
-    $(".part5 div > .logos:gt(0)").hide();
+    //End
 
-    setInterval(function () {
-        $('.part5 div > .logos:first')
-            .fadeOut(1000)
-            .next()
-            .fadeIn(1000)
-            .end()
-            .appendTo('.part5 div');
-    }, 7000);
+    // Logos show hide
 
+    // $(".part5 div > .logos:gt(0)").hide();
+    //
+    // setInterval(function () {
+    //     $('.part5 div > .logos:first')
+    //         .fadeOut(1000)
+    //         .next()
+    //         .fadeIn(1000)
+    //         .end()
+    //         .appendTo('.part5 div');
+    // }, 7000);
+
+    // End
 
 });
+
+$('.subtotal ul').css('max-height', $(window).height() - 160);
 
 ///drop menu show hide
 
@@ -107,9 +133,8 @@ $(document).on('click', function (e) {
 
 
 $('.bucket + li').text($('.subtotal').find('li').length);
-$('.close').on('mouseup', function (e) {
-
-
+$('.close').on('click', function (e) {
+    console.log(123);
     $(this).parents().eq(1).fadeOut(200, function (e) {
         $(this).remove();
         $('.bucket + li').text($('.subtotal').find('li').length);
