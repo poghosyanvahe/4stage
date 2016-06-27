@@ -1,51 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>jQuery UI Slider - Range slider</title>
+    <link rel="stylesheet" href="lib/jQueryUI/css/jQueryUi.css">
+    <script src="lib/jQuery/jquery-1.12.3.min.js"></script>
+    <script src="lib/jQueryUI/js/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [100, 300],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                    " - $" + $("#slider-range").slider("values", 1));
+        });
+    </script>
+
     <style>
-        #slideshow {
-            margin: 50px auto;
-            position: relative;
-            width: 240px;
-            height: 240px;
-            padding: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        /* Base for label styling */
+        [type="checkbox"]:not(:checked),
+        [type="checkbox"]:checked {
+            position: absolute;
+            left: -9999px;
         }
 
-        #slideshow > div {
+        [type="checkbox"]:not(:checked) + label,
+        [type="checkbox"]:checked + label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+        }
+
+        /* checkbox aspect */
+        [type="checkbox"]:not(:checked) + label:before,
+        [type="checkbox"]:checked + label:before {
+            content: '';
             position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
+            left: 0;
+            top: 2px;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #aaa;
+            background: none;
+        }
+
+        /* checked mark aspect */
+        [type="checkbox"]:not(:checked) + label:after,
+        [type="checkbox"]:checked + label:after {
+            content: '✔';
+            position: absolute;
+            top: 5px;
+            left: 2px;
+            font-size: 16px;
+            line-height: 0.8;
+            color: #333;
+            transition: all .2s;
+        }
+
+        /* checked mark aspect changes */
+        [type="checkbox"]:not(:checked) + label:after {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        [type="checkbox"]:checked + label:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* disabled checkbox */
+        [type="checkbox"]:disabled:not(:checked) + label:before,
+        [type="checkbox"]:disabled:checked + label:before {
+            box-shadow: none;
+            border-color: #bbb;
+            background-color: #ddd;
+        }
+
+        [type="checkbox"]:disabled:checked + label:after {
+            color: #999;
+        }
+
+        [type="checkbox"]:disabled + label {
+            color: #aaa;
+        }
+
+        .slider-range {
+
+            border-radius: 50px;
+            background: #ccc;
+
+        }
+
+        .ui-slider-horizontal {
+            height: 4px;
+        }
+
+        .ui-corner-all {
+            border-radius: 50px;
+            border: none;
+            background: #eee;
+        }
+
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -8px;
+        }
+
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+            background: #fff;
+            border: 2px solid #666;
+        }
+
+        .ui-widget-header {
+            background: #666;
+        }
+
+        .ui-slider .ui-slider-handle {
+            width: 16px;
+            height: 16px;
+        }
+
+        .ui-slider-handle:focus {
+            outline: none;
+        }
+
+        #amount {
+            color: #666;
+            font-size: 14px;
+            border: none;
         }
     </style>
 </head>
 <body>
-<div id="slideshow">
-    <div>
-        <img src="//farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
-    </div>
-    <div>
-        <img src="//farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
-    </div>
-    <div>
-        Pretty cool eh? This slide is proof the content can be anything.
-    </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-    $(".part5 > div:gt(0)").hide();
 
-    setInterval(function () {
-        $('#slideshow > div:first')
-                .fadeOut(1000)
-                .next()
-                .fadeIn(1000)
-                .end()
-                .appendTo('#slideshow');
-    }, 3000);
-</script>
+
+<div id="slider-range"></div>
+<p>
+    <label for="amount">Price range:</label>
+    <input type="text" id="amount" readonly>
+</p>
+
+<form action="#">
+    <!--<p>-->
+    <!--<input type="checkbox" id="test1" />-->
+    <!--<label for="test1">Red</label>-->
+    <!--</p>-->
+    <p>
+        <input type="checkbox" id="test2" checked="checked"/>
+        <label for="test2">Yellow</label>
+    </p>
+    <!--<p>-->
+    <!--<input type="checkbox" id="test3" checked="checked" disabled="disabled" />-->
+    <!--<label for="test3">Green</label>-->
+    <!--</p>-->
+    <!--<p>-->
+    <!--<input type="checkbox" id="test4" disabled="disabled" />-->
+    <!--<label for="test4">Brown</label>-->
+    <!--</p>-->
+</form>
+
 </body>
 </html>

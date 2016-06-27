@@ -1,6 +1,20 @@
 /**
  * Created by User on 29.03.2016.
  */
+function CalculateTotalPrice() {
+    var totalPrice = 0;
+    for (i = 0; i < $('.subtotal').find('li').length; i++) {
+        var aaa = $('.subtotal').find('li').eq(i).find(".price-bucket");
+        var singlePrice = parseInt(aaa.text().slice(1));
+        console.log(singlePrice);
+        totalPrice += singlePrice;
+    }
+    console.log(totalPrice);
+    $(".total-price").text("$" + totalPrice);
+    return totalPrice;
+}
+
+
 $(document).ready(function () {
 
     $(window).scroll(function () {
@@ -27,7 +41,7 @@ $(document).ready(function () {
         singleItem: true,
         pagination: false,
         navigation: false,
-        autoPlay: true,
+        // autoPlay: true,
         stopOnHover: true
 
         // "singleItem:true" is a shortcut for:
@@ -61,18 +75,19 @@ $(document).ready(function () {
 
     // Logos show hide
 
-    // $(".part5 div > .logos:gt(0)").hide();
-    //
-    // setInterval(function () {
-    //     $('.part5 div > .logos:first')
-    //         .fadeOut(1000)
-    //         .next()
-    //         .fadeIn(1000)
-    //         .end()
-    //         .appendTo('.part5 div');
-    // }, 7000);
+    $(".part5 div > .logos:gt(0)").hide();
+
+    setInterval(function () {
+        $('.part5 div > .logos:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('.part5 div');
+    }, 7000);
 
     // End
+    CalculateTotalPrice();
 
 });
 
@@ -87,6 +102,7 @@ $(document).on('click', function (e) {
     }
 
     if ($('.login').is(':visible') && $(e.target).closest(".login").length == 0) {
+        $('.login').css('z-index', '-1');
         $('.login').fadeOut();
         if ($('.all').hasClass('black-overlay')) {
             $('.all').removeClass('black-overlay');
@@ -95,6 +111,7 @@ $(document).on('click', function (e) {
 
     } else if (!$('.login').is(':visible') && $(e.target).closest(".user-login").length != 0) {
         $('.login').fadeIn();
+        $('.login').css('z-index', '1');
         if (!$('.all').hasClass('black-overlay')) {
             $('.all').addClass('black-overlay');
             $('body').css('overflow-y', 'hidden');
@@ -105,6 +122,7 @@ $(document).on('click', function (e) {
 
 
     if ($('.subtotal').is(':visible') && $(e.target).closest(".subtotal").length == 0) {
+        $('.subtotal').css('z-index', '-1');
         $('.subtotal').fadeOut();
         if ($('.all').hasClass('black-overlay')) {
             $('.all').removeClass('black-overlay');
@@ -112,6 +130,7 @@ $(document).on('click', function (e) {
         }
     } else if (!$('.subtotal').is(':visible') && $(e.target).closest(".bucket").length != 0) {
         $('.subtotal').fadeIn();
+        $('.subtotal').css('z-index', '1');
         if (!$('.all').hasClass('black-overlay')) {
             $('.all').addClass('black-overlay');
             $('body').css('overflow-y', 'hidden')
@@ -127,6 +146,22 @@ $(document).on('click', function (e) {
         }
     }
 
+    if ($('.find').is(':visible') && $(e.target).closest(".find").length == 0) {
+        $('.find').css('z-index', '-1');
+        $('.find').fadeOut();
+        if ($('.all').hasClass('black-overlay')) {
+            $('.all').removeClass('black-overlay');
+            $('body').css('overflow-y', 'scroll')
+        }
+    } else if (!$('.find').is(':visible') && $(e.target).closest(".search").length != 0) {
+        $('.find').fadeIn();
+        $('.find').css('z-index', '1');
+        if (!$('.all').hasClass('black-overlay')) {
+            $('.all').addClass('black-overlay');
+            $('body').css('overflow-y', 'hidden')
+        }
+    }
+
 });
 
 /// END drop menu show hide
@@ -137,6 +172,7 @@ $('.close').on('click', function (e) {
     console.log(123);
     $(this).parents().eq(1).fadeOut(200, function (e) {
         $(this).remove();
+        CalculateTotalPrice();
         $('.bucket + li').text($('.subtotal').find('li').length);
         if ($('.subtotal').find('li').length == 0) {
             $('.subtotal').find('li').hide();
@@ -154,17 +190,26 @@ $('.close').on('click', function (e) {
 
 $('.add').on('click', function (e) {
     $('.bucket + li').text($('.subtotal').find('li').length + 1);
-    src = $(this).parents().eq(2).find('a img').attr('src');
+    priceRec = $(this).parent().find('.price-rec').text();
+
+
+    // total = price + parseInt($('.total-price').text().slice(1));
+    // $('.total-price').text('$' + total);
+    imgSrc = $(this).parents().eq(2).find('a img').attr('src');
     $('.subtotal').find('ul').append('<li class="clearfix">' +
-        '<div class="pic"><img src="' + src + '" alt=""></div>' +
+        '<div class="pic"><img src="' + imgSrc + '" alt=""></div>' +
         '<div>' +
         '<h4><a href="#">D400-Dante</a></h4>' +
         '<p>Yamaha</p><p>Qty: <span>1</span></p>' +
-        '</div><div><a class="close"></a><p>$250</p></div>' +
+        '</div><div><a class="close"></a><p class="price-bucket">' + priceRec + '</p></div>' +
         '</li>');
 
     $(this).fadeOut(100, function () {
         $(this).find('+ .added').fadeIn()
     });
 
+    CalculateTotalPrice();
 });
+
+
+

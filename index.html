@@ -76,10 +76,20 @@
             <li><a href=""><img src="img/ico/Podstavki/4.svg" alt=""><span>Гитары</span></a></li>
             <li><a href=""><img src="img/ico/Podstavki/5.svg" alt=""><span>Смычковые инструменты</span></a></li>
         </ul>
+        <div class="find">
+
+            <div>
+                <form action="">
+
+                    <img src="img/ico/search-input.svg" alt=""><input type="text" name="search" class=""
+                                                                      placeholder="Поиск">
+                </form>
+            </div>
+
+        </div>
     </div>
     <div class="log-sub">
-        <div class="find">
-        </div>
+
         <div class="login">
             <h1>Вход</h1>
             <form>
@@ -101,7 +111,7 @@
                     </div>
                     <div>
                         <a class="close"></a>
-                        <p>$250</p>
+                        <p class="price-bucket">$300</p>
                     </div>
                 </li>
                 <li class="clearfix">
@@ -113,7 +123,7 @@
                     </div>
                     <div>
                         <a class="close"></a>
-                        <p>$250</p>
+                        <p class="price-bucket">$240</p>
                     </div>
                 </li>
                 <li class="clearfix">
@@ -125,7 +135,7 @@
                     </div>
                     <div>
                         <a class="close"></a>
-                        <p>$250</p>
+                        <p class="price-bucket">$250</p>
                     </div>
                 </li>
                 <li class="clearfix">
@@ -137,7 +147,7 @@
                     </div>
                     <div>
                         <a class="close"></a>
-                        <p>$250</p>
+                        <p class="price-bucket">$420</p>
                     </div>
                 </li>
                 <li class="clearfix">
@@ -149,13 +159,13 @@
                     </div>
                     <div>
                         <a class="close"></a>
-                        <p>$250</p>
+                        <p class="price-bucket">$100</p>
                     </div>
                 </li>
             </ul>
             <div class="checkout clearfix">
                 <span>Subtotal</span>
-                <span>$12500</span>
+                <span class="total-price">$0</span>
                 <a href="#">ПЕРЕЙТИ К ОФОРМЛЕНИЮ</a>
             </div>
             <div class="bucket-empty">
@@ -165,8 +175,9 @@
             </div>
         </div>
     </div>
+
 </header>
-<main>
+<main class="home">
     <div class="all"></div>
     <div id="owl-demo" class="owl-carousel owl-theme part1">
         <div class="item"
@@ -280,59 +291,113 @@
             <h1>Рекомендованные</h1>
             <div id="owl-recom">
                 <div class="item">
-                    <a href="#"><img src="img/guitar1-01.png" alt="Owl Image"></a>
+                    <div>
+                        <a href="#"><img src="img/guitar1-01.png" alt="Owl Image"></a>
+                        <div class="overlay-item">
+                            <div>
+                                <button class="button">добавить в карзину</button>
+                                <button class="button">подробности</button>
+                            </div>
+                        </div>
+                    </div>
                     <h4><a href="#">Lorem ipsum dolor sit</a></h4>
                     <p><a href="#">Yamaha</a></p>
-                    <div class="clearfix"><span>$250,00</span><span class="add"><img src="img/ico/add.svg"
-                                                                                     alt=""></span><span
-                            class="added"><img
-                            src="img/ico/added.svg" alt=""></span></div>
+                    <div class="clearfix">
+                        <span class="price-rec">$240,00</span>
+                        <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                        <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                    </div>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/guitar2-01.png" alt="Owl Image"></a>
+                    <div>
+                        <a href="#"><img src="img/guitar2-01.png" alt="Owl Image"></a>
+                        <div class="overlay-item">
+                            <div>
+                                <button class="button">добавить в карзину</button>
+                                <button class="button">подробности</button>
+                            </div>
+                        </div>
+                    </div>
                     <h4><a href="#">Lorem ipsum dolor sit Lorem ipsum dolor sit</a></h4>
                     <p><a href="#">Yamaha</a></p>
-                    <div class="clearfix"><span>$250,00</span><span class="add"><img src="img/ico/add.svg"
-                                                                                     alt=""></span><span
-                            class="added"><img
-                            src="img/ico/added.svg" alt=""></span></div>
+                    <div class="clearfix">
+                        <span class="price-rec">$250,00</span>
+                        <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                        <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                    </div>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/guitar3-01.png" alt="Owl Image"></a>
+                    <div>
+                        <a href="#"><img src="img/guitar3-01.png" alt="Owl Image"></a>
+                        <div class="overlay-item">
+                            <div>
+                                <button class="button">добавить в карзину</button>
+                                <button class="button">подробности</button>
+                            </div>
+                        </div>
+                    </div>
                     <h4><a href="#">Lorem ipsum dolor sit</a></h4>
                     <p><a href="#">Yamaha</a></p>
-                    <div class="clearfix"><span>$250,00</span><span class="add"><img src="img/ico/add.svg"
-                                                                                     alt=""></span><span
-                            class="added"><img
-                            src="img/ico/added.svg" alt=""></span></div>
+                    <div class="clearfix">
+                        <span class="price-rec">$250,00</span>
+                        <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                        <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                    </div>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/guitar3-01.png" alt="Owl Image"></a>
+                    <div>
+                        <a href="#"><img src="img/guitar3-01.png" alt="Owl Image"></a>
+                        <div class="overlay-item">
+                            <div>
+                                <button class="button">добавить в карзину</button>
+                                <button class="button">подробности</button>
+                            </div>
+                        </div>
+                    </div>
                     <h4><a href="#">Lorem ipsum dolor sit</a></h4>
                     <p><a href="#">Yamaha</a></p>
-                    <div class="clearfix"><span>$250,00</span><span class="add"><img src="img/ico/add.svg"
-                                                                                     alt=""></span><span
-                            class="added"><img
-                            src="img/ico/added.svg" alt=""></span></div>
+                    <div class="clearfix">
+                        <span class="price-rec">$250,00</span>
+                        <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                        <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                    </div>
                 </div>
 
                 <div class="item">
-                    <a href="#"><img src="img/guitar2-01.png" alt="Owl Image"></a>
+                    <div>
+                        <a href="#"><img src="img/guitar2-01.png" alt="Owl Image"></a>
+                        <div class="overlay-item">
+                            <div>
+                                <button class="button">добавить в карзину</button>
+                                <button class="button">подробности</button>
+                            </div>
+                        </div>
+                    </div>
                     <h4><a href="#">Lorem ipsum dolor sit</a></h4>
                     <p><a href="#">Yamaha</a></p>
-                    <div class="clearfix"><span>$250,00</span><span class="add"><img src="img/ico/add.svg"
-                                                                                     alt=""></span><span
-                            class="added"><img
-                            src="img/ico/added.svg" alt=""></span></div>
+                    <div class="clearfix">
+                        <span>$250,00</span>
+                        <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                        <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                    </div>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/guitar3-01.png" alt="Owl Image"></a>
+                    <div>
+                        <a href="#"><img src="img/guitar3-01.png" alt="Owl Image"></a>
+                        <div class="overlay-item">
+                            <div>
+                                <button class="button">добавить в карзину</button>
+                                <button class="button">подробности</button>
+                            </div>
+                        </div>
+                    </div>
                     <h4><a href="#">Lorem ipsum dolor sit</a></h4>
                     <p><a href="#">Yamaha</a></p>
-                    <div class="clearfix"><span>$250,00</span><span class="add"><img src="img/ico/add.svg"
-                                                                                     alt=""></span><span
-                            class="added"><img
-                            src="img/ico/added.svg" alt=""></span></div>
+                    <div class="clearfix">
+                        <span class="price-rec">$250,00</span>
+                        <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                        <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                    </div>
                 </div>
 
             </div>
