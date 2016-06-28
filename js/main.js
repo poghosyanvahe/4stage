@@ -1,6 +1,8 @@
 /**
  * Created by User on 29.03.2016.
  */
+
+
 function CalculateTotalPrice() {
     var totalPrice = 0;
     for (i = 0; i < $('.subtotal').find('li').length; i++) {
@@ -21,17 +23,17 @@ $(document).ready(function () {
 
     });
 
-    // part 2 grid
-
-    $('.grid').isotope({
-        itemSelector: '.grid-item',
-        masonry: {
-            columnWidth: 100,
-            gutter: 20
-        }
-    });
-
-    // End
+    // // part 2 grid
+    //
+    // $('.grid').isotope({
+    //     itemSelector: '.grid-item',
+    //     masonry: {
+    //         columnWidth: 100,
+    //         gutter: 20
+    //     }
+    // });
+    //
+    // // End
 
     // Slider caver
 
@@ -43,13 +45,7 @@ $(document).ready(function () {
         navigation: false,
         // autoPlay: true,
         stopOnHover: true
-
-        // "singleItem:true" is a shortcut for:
-        // items : 1,
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
+        
 
     });
 
@@ -72,6 +68,22 @@ $(document).ready(function () {
     });
 
     //End
+
+    // Slider list
+
+    $("#owl-list").owlCarousel({
+
+        slideSpeed: 300,
+        singleItem: true,
+        pagination: false,
+        navigation: false,
+        // autoPlay: true,
+        stopOnHover: true
+
+
+    });
+
+    // End
 
     // Logos show hide
 

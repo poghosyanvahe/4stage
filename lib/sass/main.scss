@@ -105,6 +105,7 @@ body, a, a:hover, a:focus {
 
 body {
     font-family: $dejavu, sans-serif;
+    line-height: normal;
 }
 
 h1 {
@@ -581,11 +582,13 @@ header {
 }
 
 .list {
-    .part1 {
+    .part1,
+    .part2 {
         max-width: 1366px;
         padding: 0 103px;
         margin: 0 auto;
     }
+
 }
 
 main {
@@ -610,17 +613,12 @@ main {
             margin-bottom: 60px;
             position: relative;
         }
-        .part1 .item {
-            margin: 0 auto;
+        .one-slide .item {
             height: 70vh;
-
             .clearfix {
                 position: relative;
                 max-width: 1366px;
-                margin: 0 auto;
-                height: 100%;
                 .shop-now {
-                    position: absolute;
                     padding: 0 0 0 103px;
                     top: 40%;
                     h1, p {
@@ -638,43 +636,11 @@ main {
                         border-radius: 50px;
                     }
                 }
+
             }
-            //img {
-            //    width: 100%;
-            //    display: block;
-            //    height: auto;
-            //}
         }
 
         .part2 {
-
-            ///* clear fix */
-            //.grid:after {
-            //    content: '';
-            //    display: block;
-            //    clear: both;
-            //}
-            //
-            ///* ---- .grid-item ---- */
-            //
-            //.grid-item {
-            //    float: left;
-            //    width: 211px;
-            //    height: 425px;
-            //
-            //    a {
-            //        img {
-            //            width: 100%;
-            //        }
-            //    }
-            //}
-            //
-            //.grid-item--width2 {
-            //    width: 464px;
-            //}
-            //.grid-item--height2 {
-            //    height: 425px;
-            //}
 
             .instruments {
                 font-size: 0;
@@ -816,50 +782,6 @@ main {
                             }
                         }
 
-                        h4 {
-                            height: 32px;
-                            margin: 10px 0;
-                            a {
-                                text-transform: uppercase;
-                                font-family: $condensedBold, sans-serif;
-
-                                font-size: 16px;
-                            }
-
-                        }
-                        p {
-                            margin-bottom: 10px;
-                        }
-                        div {
-                            span {
-                                float: left;
-                                font-size: 20px;
-                                font-family: $condensed, sans-serif;
-
-                            }
-
-                            .added, .add {
-                                position: absolute;
-                                right: 0;
-                                display: none;
-                                img {
-                                    width: 20px;
-                                    height: 20px;
-                                }
-                            }
-                            .add {
-                                display: inline-block;
-                                height: 20px;
-                                cursor: pointer;
-                                z-index: 5;
-                                opacity: 0.7;
-                                @include transition(0.3);
-                                &:hover {
-                                    transform: rotate(90deg);
-                                    opacity: 1;
-                                }
-                            }
-                        }
                     }
                 }
                 .owl-controls {
@@ -927,19 +849,18 @@ main {
     &.list {
         .part1 {
             .navigation {
-                .nstrument {
-                    margin-top: 60px;
+                .instrument {
                     background: $lightGrey;
-                    width: 275px;
                     border-radius: 10px;
                     overflow: hidden;
                     position: relative;
+                    padding: 0;
                     div {
                         background: #fff;
                         h1 {
                             display: inline-block;
                             font-size: 20px;
-                            padding: 15px;
+                            padding: 15px 0;
                         }
                         span {
                             cursor: pointer;
@@ -976,15 +897,189 @@ main {
             }
         }
         .part2 {
-            .type-of-instrument {
-                ul{
+            .category {
+                padding: 0;
+                border-top: 1px solid $lightGrey;
+                h3 {
+                    text-transform: uppercase;
+                    font-family: $condensedBold, sans-serif;
+                    margin-bottom: 15px;
+                }
+                li {
+                    margin-bottom: 5px;
+                    color: $black;
+                    font-family: $bold, sans-serif;
+                    a {
+                        color: $darkGrey;
+                        font-family: $dejavu;
+                        &:hover {
+                            color: $black;
+                            font-family: $bold, sans-serif;
+                        }
+                    }
+                    label {
+                        font-family: $dejavu;
+                        font-size: 13px;
+                    }
+                }
+                .type-of-instrument,
+                .instrument-brand,
+                .price-slider {
+                    padding: 15px 0;
+                }
+                .type-of-instrument {
+                    ul {
+                        li {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                .instrument-brand {
+                    ul {
+                        li {
+                            text-transform: capitalize;;
+                        }
+                    }
+                }
+                .price-slider {
+                    a {
+                        @include transition(0);
+                    }
+                    .slider-range {
+                        border-radius: 50px;
+                        background: #ccc;
 
+                    }
+
+                    .ui-slider-horizontal {
+                        height: 4px;
+                        .ui-slider-handle {
+                            top: -7px;
+                        }
+                    }
+
+                    .ui-corner-all {
+                        border-radius: 50px;
+                        border: none;
+                        background: #eee;
+                    }
+
+                    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+                        background: #fff;
+                        border: 2px solid #666;
+                    }
+
+                    .ui-widget-header {
+                        background: #666;
+                    }
+
+                    .ui-slider .ui-slider-handle {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    .ui-slider-handle:focus {
+                        outline: none;
+                    }
+
+                    p {
+                        margin-top: 15px;
+                        #amount {
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            .instrument-list {
+                padding-right: 0;
+                #owl-list {
+                    height: 320px;
+                    margin-bottom: 10px;
+                    .item {
+                        height: 320px;
+                        .clearfix {
+                            .shop-now {
+                                padding-left: 50px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+                .list-container {
+                    .row {
+                        -moz-column-width: 15em;
+                        -webkit-column-width: 15em;
+                        -moz-column-gap: .5em;
+                        -webkit-column-gap: .5em;
+                        margin-right: 1px;
+                        margin-left: -8px;
+
+                    }
+
+                    .panel {
+                        border: none;
+                        box-shadow: none;
+                        -webkit-border-radius: 0;
+                        -moz-border-radius: 0;
+                        border-radius: 0;
+                        display: inline-block;
+                        margin: .5em;
+                        padding: 0;
+                        width: 98%;
+                        img {
+                            width: 100%
+                        }
+                        .list-img {
+                            span {
+                                position: absolute;
+                                top: 20px;
+                                left: 0;
+                            }
+                        }
+                        .clearfix {
+                            .add, .added {
+                                img {
+
+                                    width: inherit;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 
     // global
+
+    .one-slide .item {
+        margin: 0 auto;
+        .clearfix {
+            position: relative;
+            margin: 0 auto;
+            height: 100%;
+            .shop-now {
+                position: absolute;
+                h1, p {
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+                h1 {
+                    font-family: $condensedBold, sans-serif;
+                }
+                a {
+                    display: inline-block;
+                    background: #fff;
+                    color: $black;
+                    padding: 10px 25px;
+                    border-radius: 50px;
+                }
+            }
+
+        }
+    }
 
     .item {
         div {
@@ -1029,6 +1124,58 @@ main {
                 opacity: 1;
             }
         }
+        a {
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        h4 {
+            height: 32px;
+            margin: 10px 0;
+            a {
+                text-transform: uppercase;
+                font-family: $condensedBold, sans-serif;
+
+                font-size: 16px;
+            }
+
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        div {
+            span {
+                float: left;
+                font-size: 20px;
+                font-family: $condensed, sans-serif;
+
+            }
+
+            .added, .add {
+                position: absolute;
+                right: 0;
+                display: none;
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .add {
+                display: inline-block;
+                height: 20px;
+                cursor: pointer;
+                z-index: 5;
+                opacity: 0.7;
+                @include transition(0.3);
+                &:hover {
+                    transform: rotate(90deg);
+                    opacity: 1;
+                }
+            }
+        }
     }
 
     /// custom chackbox
@@ -1053,7 +1200,7 @@ main {
         content: '';
         position: absolute;
         left: 0;
-        top: 2px;
+        top: 0;
         width: 14px;
         height: 14px;
         border: 1px solid #aaa;
@@ -1065,7 +1212,7 @@ main {
     [type="checkbox"]:checked + label:after {
         content: '✔';
         position: absolute;
-        top: 5px;
+        top: 3px;
         left: 2px;
         font-size: 16px;
         line-height: 0.8;

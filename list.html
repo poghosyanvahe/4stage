@@ -5,10 +5,10 @@
     <title>4stage</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="lib/jQueryUI/css/jQueryUi.css">
     <link href="lib/owl-carousel/css/owl.carousel.css" rel="stylesheet">
     <link href="lib/owl-carousel/css/owl.theme.css" rel="stylesheet">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
 </head>
 <body>
@@ -177,8 +177,8 @@
 </header>
 <main class="list">
     <div class="part1">
-        <div class="navigation">
-            <div class="instrument">
+        <div class="navigation clearfix">
+            <div class="instrument col-lg-3">
                 <div>
                     <h1>ГИТАРЫ</h1>
                     <span><img src="img/ico/dropdowen-arrow.svg" alt=""></span>
@@ -193,28 +193,30 @@
                     <li><a href="#">Струны</a></li>
                 </ul>
             </div>
-            <div class="ordering"></div>
+            <div class="ordering col-lg-9"></div>
         </div>
 
     </div>
-    <div class="part2">
-        <div class="category">
-            <ul class="type-of-instrument">
-                <li><a href="#">Классические</a></li>
-                <li><a href="#">Акустические</a></li>
-                <li><a href="#">Электроклассические</a></li>
-                <li><a href="#">Электроакустические</a></li>
-                <li><a href="#">Электрогитары</a></li>
-                <li><a href="#">Bass</a></li>
-                <li><a href="#">Бас-гитары</a></li>
-                <li><a href="#">Усилители</a></li>
-                <li><a href="#">Педали эффектов</a></li>
-                <li><a href="#">Сайлент гитары</a></li>
-                <li><a href="#">Аксессуары</a></li>
-            </ul>
+    <div class="part2 clearfix">
+        <div class="category col-lg-3">
+            <div class="type-of-instrument">
+                <ul>
+                    <li><a href="#">Классические</a></li>
+                    <li><a href="#">Акустические</a></li>
+                    <li><a href="#">Электроклассические</a></li>
+                    <li><a href="#">Электроакустические</a></li>
+                    <li><a href="#">Электрогитары</a></li>
+                    <li><a href="#">Bass</a></li>
+                    <li><a href="#">Бас-гитары</a></li>
+                    <li><a href="#">Усилители</a></li>
+                    <li><a href="#">Педали эффектов</a></li>
+                    <li><a href="#">Сайлент гитары</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                </ul>
+            </div>
             <div class="instrument-brand">
                 <h3>бренды</h3>
-                <div></div><ul>
+                <ul>
                     <li>
                         <input type="checkbox" id="test1" checked="checked"/>
                         <label for="test1">Все</label>
@@ -239,13 +241,155 @@
             </div>
             <div class="price-slider">
                 <h3>цена</h3>
-                <ul>
-                    <div></div>
-                </ul>
+                <div id="slider-range"></div>
+                <p>
+                    <input type="text" id="amount" readonly>
+                </p>
             </div>
         </div>
-        <div class="instrument-list">
-
+        <div class="instrument-list col-lg-9">
+            <div id="owl-list" class="owl-carousel owl-theme one-slide">
+                <div class="item"
+                     style="background: url(img/guitar543-01.png),no-repeat;background-position: center; background-size: cover">
+                    <div class="clearfix">
+                        <div class="shop-now col-lg-6">
+                            <h1>yor daily discount here</h1>
+                            <a href="#">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item"
+                     style="background: url(img/blue-earphones-01.png),no-repeat; background-position: center; background-size: cover">
+                    <div class="clearfix">
+                        <div class="shop-now col-lg-6">
+                            <h1>JBL Reflect Aware C Earphones</h1>
+                            <a href="#">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item"
+                     style="background: url(img/black-earphones-01.png),no-repeat; background-position: center; background-size: cover">
+                    <div class="clearfix">
+                        <div class="shop-now col-lg-6">
+                            <h1>sony hi-res premium in-ear headphones</h1>
+                            <a href="#">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-container">
+                <div class="row">
+                    <div class="panel item">
+                        <div class="list-img">
+                            <a href="#"><img src="img/Untitled-14-01.png" alt="Owl Image"></a>
+                            <div class="overlay-item">
+                                <div>
+                                    <button class="button">добавить в карзину</button>
+                                    <button class="button">подробности</button>
+                                </div>
+                            </div>
+                            <span><img src="img/list/new-01.png" alt=""></span>
+                        </div>
+                        <h4><a href="#">Lorem ipsum dolor sit</a></h4>
+                        <p><a href="#">Yamaha</a></p>
+                        <div class="clearfix">
+                            <span class="price-rec">$240,00</span>
+                            <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                            <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="panel item">
+                        <div>
+                            <a href="#"><img src="img/blue-earphones-01.png" alt="Owl Image"></a>
+                            <div class="overlay-item">
+                                <div>
+                                    <button class="button">добавить в карзину</button>
+                                    <button class="button">подробности</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h4><a href="#">Lorem ipsum dolor sit</a></h4>
+                        <p><a href="#">Yamaha</a></p>
+                        <div class="clearfix">
+                            <span class="price-rec">$240,00</span>
+                            <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                            <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="panel item">
+                        <div>
+                            <a href="#"><img src="img/guitar543-01.png" alt=""></a>
+                            <div class="overlay-item">
+                                <div>
+                                    <button class="button">добавить в карзину</button>
+                                    <button class="button">подробности</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h4><a href="#">Lorem ipsum dolor sit</a></h4>
+                        <p><a href="#">Yamaha</a></p>
+                        <div class="clearfix">
+                            <span class="price-rec">$240,00</span>
+                            <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                            <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="panel item">
+                        <div>
+                            <a href="#"><img src="img/list/guitar4-01987.png" alt="Owl Image"></a>
+                            <div class="overlay-item">
+                                <div>
+                                    <button class="button">добавить в карзину</button>
+                                    <button class="button">подробности</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h4><a href="#">Lorem ipsum dolor sit</a></h4>
+                        <p><a href="#">Yamaha</a></p>
+                        <div class="clearfix">
+                            <span class="price-rec">$240,00</span>
+                            <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                            <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="panel item">
+                        <div>
+                            <a href="#"><img src="img/list/guitar123-01.png" alt="Owl Image"></a>
+                            <div class="overlay-item">
+                                <div>
+                                    <button class="button">добавить в карзину</button>
+                                    <button class="button">подробности</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h4><a href="#">Lorem ipsum dolor sit</a></h4>
+                        <p><a href="#">Yamaha</a></p>
+                        <div class="clearfix">
+                            <span class="price-rec">$240,00</span>
+                            <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                            <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                        </div>
+                    </div>
+                    <div class="panel item">
+                        <div>
+                            <a href="#"><img src="img/list/guitar987-01.png" alt="Owl Image"></a>
+                            <div class="overlay-item">
+                                <div>
+                                    <button class="button">добавить в карзину</button>
+                                    <button class="button">подробности</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h4><a href="#">Lorem ipsum dolor sit</a></h4>
+                        <p><a href="#">Yamaha</a></p>
+                        <div class="clearfix">
+                            <span class="price-rec">$240,00</span>
+                            <span class="add"><img src="img/ico/add.svg" alt=""></span>
+                            <span class="added"><img src="img/ico/added.svg" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
@@ -284,7 +428,23 @@
 
 <script type="text/javascript" src="lib/jQuery/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="lib/jQueryUI/js/jquery-ui.min.js"></script>
+<script>
+    $(function () {
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 500,
+            values: [100, 300],
+            slide: function (event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                " - $" + $("#slider-range").slider("values", 1));
+    });
+</script>
 <script type="text/javascript" src="lib/massonry-isotop/js/masonry.js"></script>
+
 <script src="lib/owl-carousel/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
